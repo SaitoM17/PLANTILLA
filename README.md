@@ -1,10 +1,9 @@
-
 # Guía para la Estructura y Configuración de Proyectos de Análisis de Datos
 
 Esta guía proporciona una estructura organizada para proyectos de análisis de datos, junto con buenas prácticas para la gestión de dependencias y el versionado con Git.
 
 
-## 1. Organización de Carpetas en un Proyecto de Análisis de Datos
+## Organización de Carpetas en un Proyecto de Análisis de Datos
 
 Es importante mantener una estructura organizada en tus proyectos. Se recomienda la siguiente jerarquía:
 
@@ -20,87 +19,78 @@ Es importante mantener una estructura organizada en tus proyectos. Se recomienda
 │── 📂 models/          # Si usas machine learning, guarda los modelos aquí
 │── 📂 docs/            # Documentación del proyecto
 │── requirements.txt    # Lista de paquetes necesarios (para instalar en otro PC)
-│── README.md           # Explicación del proyecto
-│── LICENSE
-```
-## Ejemplo de Creación de Carpetas con Python
-
-Para automatizar la creación de esta estructura, usa el siguiente script en Python:
-
-```Python
-import os
-
-# Define la estructura de carpetas
-folders = ["data", "notebooks", "scripts", "reports", "models", "docs"]
-
-# Crea las carpetas si no existen
-for folder in folders:
-    os.makedirs(folder, exist_ok=True)
-
-print("Estructura de carpetas creada con éxito.")
+│── README.md           # Guía para la Estructura y Configuración de Proyectos de Análisis de Datos
+│── LICENSE             # LICENSE del proyecto
+|── plantilla_README.md # Plantilla para proyectos Explicación del proyecto
 ```
 
+## Clonar Plantilla (Repositorio)
+**1. Clona el repositorio de la plantilla:** Clona tu repositorio de plantilla y renombra la carpeta del proyecto con el nombre adecuado para tu nuevo proyecto.
+```            
+git clone https://github.com/SaitoM17/PLANTILLA.git nombre_de_tu_proyecto
+```
+   * ##### **Moverse a la carpeta del proyecto:**
+      ```
+      cd nombre_de_tu_proyecto
+      ```
+**2. Renombra los archivos según sea necesario:** Si es necesario, cambia el nombre de los archivos como plantilla_README.md a README.md.
+```
+mv plantilla_README.md README.md
+```
 
-## 2. Uso de un Entorno Virtual para Aislar Dependencias
+**3. Elimina el historial de Git:** Para comenzar con un repositorio limpio, elimina el historial de Git del repositorio clonado (esto borrará los archivos de configuración de Git previos).
+```
+rm -rf .git
+```
 
-Para evitar conflictos con versiones de librerías, se recomienda usar entornos virtuales.
-
-###  Crear y Activar un Entorno Virtual
-
-#### Crear el entorno virtual:
+**4. Crea el entorno virtual:** Crea un entorno virtual para aislar las dependencias de tu proyecto y evitar conflictos con otras librerías.
 ```
 python -m venv venv
 ```
 #### Activar el entorno:
-* #### En Windows:
+* ##### **En Windows:**
 
     ```
     venv\Scripts\activate
     ```
 
-* #### En Mac/Linux::
+* ##### **En Mac/Linux:**
 
     ```
     source venv/bin/activate
     ```
 
-#### Instalar dependencias dentro del entorno:
-```
-pip install numpy pandas matplotlib seaborn scikit-learn
-```
-#### Para guardar las librerías instaladas en un archivo requirements.txt:
-```
-pip freeze > requirements.txt
-```
-#### Para reinstalar las dependencias en otro equipo:
+**5. Instala las dependencias:** Si tu proyecto tiene un archivo requirements.txt con las dependencias necesarias, instálalas:
 ```
 pip install -r requirements.txt
 ```
-
-
-## 3. Versionado del Proyecto con Git
-
-Para mantener un historial de cambios y colaborar con otros, usa Git y GitHub.
-
-### Configurar Git en tu Proyecto
-
-#### Inicializar Git:
+   * Si no tienes el archivo requirements.txt, instala las dependencias que necesites manualmente. Por ejemplo: 
+      ```
+      pip install numpy pandas matplotlib seaborn
+      ```
+**6. Inicializa Git:** Inicializa un nuevo repositorio Git en tu proyecto.
 ```
 git init
 ```
-#### Crear un archivo .gitignore para excluir archivos innecesarios:
-```
-echo "venv/" >> .gitignore
-echo "__pycache__/" >> .gitignore
-echo "*.csv" >> .gitignore
-```
-#### Subir el proyecto a GitHub:
+
+**7. Configura .gitignore:** Crea o edita el archivo .gitignore para evitar que el entorno virtual o archivos innecesarios se suban al repositorio. Asegúrate de incluir venv/ y cualquier otro archivo que no quieras rastrear con Git (como archivos de configuración, logs, etc.).
+
+   * **Ejemplo de .gitignore:**
+      ```
+      venv/
+      __pycache__/
+      *.csv
+      *.log
+      ```
+**8. Haz tu primer commit:** Agrega todos los archivos al repositorio y haz tu primer commit.
 ```
 git add .
-git commit -m "Primer commit"
-git branch -M main
-git remote add origin https://github.com/usuario/repositorio.git
-git push -u origin main
+git commit -m "Primer commit: Configuración inicial del proyecto"
 ```
+**9. Sube tu proyecto a GitHub:** Si tienes un repositorio en GitHub, conecta tu proyecto local al repositorio remoto y empuja los cambios.
+```
+git remote add origin https://github.com/TU_USUARIO/nuevo_repositorio.git
+git push -u origin main
 
+```
 (Borrar este archivo y renombrar el archivo plantilla_README.md a README.md)
