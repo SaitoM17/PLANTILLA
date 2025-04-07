@@ -21,7 +21,7 @@ Es importante mantener una estructura organizada en tus proyectos. Se recomienda
 │── 📂 docs/            # Documentación del proyecto
 │── requirements.txt    # Lista de paquetes necesarios (para instalar en otro PC)
 │── README.md           # Explicación del proyecto
-
+│── LICENSE
 ```
 ## Ejemplo de Creación de Carpetas con Python
 
@@ -102,3 +102,5 @@ git branch -M main
 git remote add origin https://github.com/usuario/repositorio.git
 git push -u origin main
 ```
+
+(Borrar este archivo y renombrar el archivo plantilla_README.md a README.md)
