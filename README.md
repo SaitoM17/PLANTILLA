@@ -10,14 +10,18 @@ Es importante mantener una estructura organizada en tus proyectos. Se recomienda
 
 ```
 📂 MiProyectoAnalisisDatos/
-│── 📂 data/           # Almacena los datasets en formatos CSV, Excel, JSON, etc.
-│── 📂 notebooks/      # Contiene los Jupyter Notebooks para explorar los datos
-│── 📂 scripts/        # Guarda scripts de Python para limpieza, modelos, etc.
-│── 📂 reports/        # Contiene gráficos y reportes generados
-│── 📂 models/         # Si usas machine learning, guarda los modelos aquí
-│── 📂 docs/           # Documentación del proyecto
-│── requirements.txt   # Lista de paquetes necesarios (para instalar en otro PC)
-│── README.md         # Explicación del proyecto
+│── 📂 data/           
+│   ├── 📂 raw/         # Datos originales sin modificar
+│   └── 📂 processed/   # Datos limpios/listos para análisis
+│
+│── 📂 notebooks/       # Contiene los Jupyter Notebooks para explorar los datos
+│── 📂 scripts/         # Guarda scripts de Python para limpieza, modelos, etc.
+│── 📂 reports/         # Contiene gráficos y reportes generados
+│── 📂 models/          # Si usas machine learning, guarda los modelos aquí
+│── 📂 docs/            # Documentación del proyecto
+│── requirements.txt    # Lista de paquetes necesarios (para instalar en otro PC)
+│── README.md           # Explicación del proyecto
+
 ```
 ## Ejemplo de Creación de Carpetas con Python
 
