@@ -22,6 +22,7 @@ Es importante mantener una estructura organizada en tus proyectos. Se recomienda
 │── README.md           # Guía para la Estructura y Configuración de Proyectos de Análisis de Datos
 │── LICENSE             # LICENSE del proyecto
 |── plantilla_README.md # Plantilla para proyectos Explicación del proyecto
+|── .gitignore          # Archivos excluidos
 ```
 
 ## Clonar Plantilla (Repositorio)
