@@ -16,6 +16,8 @@ Es importante mantener una estructura organizada en tus proyectos. Se recomienda
 │── 📂 notebooks/       # Contiene los Jupyter Notebooks para explorar los datos
 │── 📂 scripts/         # Guarda scripts de Python para limpieza, modelos, etc.
 │── 📂 reports/         # Contiene gráficos y reportes generados
+│   └── 📂 figures/     # Aquí guardarás las imágenes de las gráficas
+│
 │── 📂 models/          # Si usas machine learning, guarda los modelos aquí
 │── 📂 docs/            # Documentación del proyecto
 │── requirements.txt    # Lista de paquetes necesarios (para instalar en otro PC)
